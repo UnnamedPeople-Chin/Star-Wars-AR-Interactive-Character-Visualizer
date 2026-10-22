@@ -15,7 +15,7 @@
   </p>
 
   <p>
-    <a href="#-executive-summary">Executive Summary</a> •
+    <a href="#-about-the-project">About The Project</a> •
     <a href="#-demo-video-teaser">Demo Video</a> •
     <a href="#-visual-previews">Visual Previews</a> •
     <a href="#-key-features">Key Features</a> •
@@ -29,11 +29,11 @@
 
 ---
 
-## 📌 Executive Summary
+## 📌 About The Project
 
-**Star Wars AR — Interactive Character Visualizer** adalah aplikasi Augmented Reality mobile generasi berikutnya yang memadukan teknologi *computer vision image tracking* dengan animasi 3D interaktif dan tata suara spasial sinematik. Proyek ini memecahkan keterbatasan media fisik konvensional (poster, kartu koleksi, dan ensiklopedia cetak) dengan mengubah gambar statis menjadi panggung hologram dinamis di dunia nyata.
+**Star Wars AR — Interactive Character Visualizer** is a production-grade mobile Augmented Reality application that transforms static collectible posters into interactive 3D holographic experiences. Powered by **Unity 6** and **Vuforia Engine**, the app delivers sub-2-second target recognition to project high-fidelity characters and starfighters seamlessly into physical environments.
 
-Cukup dengan mengarahkan kamera perangkat *smartphone* ke target poster yang telah ditentukan, sistem mengenali target secara presisi dalam waktu **kurang dari 2 detik** via **Vuforia Engine**. Pengguna dapat berinteraksi langsung dengan karakter legendaris seperti **Darth Vader, Luke Skywalker, Master Yoda, R2-D2**, serta kendaraan tempur ikonik **AT-AT Walker** dan **X-Wing Starfighter**. Fitur mencakup kendali gestur multisentuh (*360° orbital rotation* dan *pinch-to-zoom*), *tap-to-attack animation state machine*, info HUD hologram yang dirancang presisi di Figma, serta dialog suara asli setiap karakter untuk menghadirkan atmosfer fiksi ilmiah otentik dalam satu genggaman.
+Users can explore iconic Star Wars legends—including **Darth Vader, Luke Skywalker, Master Yoda, R2-D2, AT-AT Walker, and X-Wing Starfighter**—complete with 360° orbital rotation, pinch-to-zoom scaling, dynamic attack animation triggers, authentic character voiceovers, and a Figma-designed sci-fi HUD.
 
 ---
 
