@@ -1,245 +1,262 @@
-# 🌟 Star Wars AR — Interactive Character Visualizer
+<div align="center">
+  <img src="screenshots/logo.png" alt="Star Wars AR Logo" width="130" style="border-radius: 24px; margin-bottom: 14px;" />
+  <h1>⚡ Star Wars AR — Interactive Character Visualizer</h1>
+  <p><strong>An Immersive Augmented Reality Experience Bringing Iconic Star Wars Legends and Starfighters into the Physical World</strong></p>
 
-[![Unity](https://img.shields.io/badge/Unity-6.4-black?logo=unity)](https://unity.com)
-[![Vuforia](https://img.shields.io/badge/Vuforia-11.4.4-blue)](https://developer.vuforia.com)
-[![License](https://img.shields.io/badge/License-Educational-green)](#lisensi)
-[![Team](https://img.shields.io/badge/Kelompok-5-orange)](#tim-pengembang)
+  <p>
+    <a href="https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer"><img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge&logo=git&logoColor=white" alt="Status" /></a>
+    <a href="https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/releases"><img src="https://img.shields.io/badge/Build-Android%20APK%20(ARM64)-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android Build" /></a>
+    <a href="STAR_WARS_AR_DEMO.mp4"><img src="https://img.shields.io/badge/Demo-45s_Video_Teaser-FF6B35?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo Video" /></a>
+    <img src="https://img.shields.io/badge/Unity-6000.4.3f1%20(Unity%206)-black?style=for-the-badge&logo=unity&logoColor=white" alt="Unity 6" />
+    <img src="https://img.shields.io/badge/AR%20SDK-Vuforia%20Engine-FF6F00?style=for-the-badge&logo=augmented-reality&logoColor=white" alt="Vuforia Engine" />
+    <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C# Language" />
+    <a href="https://www.figma.com/design/7rhe1Y7xD21xiXXjXMX1ep/AR-PROJECT"><img src="https://img.shields.io/badge/UI%2FUX-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma Design" /></a>
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
+  </p>
 
-Membawa dunia Star Wars ke genggaman Anda. Aplikasi Augmented Reality ini menghadirkan karakter-karakter ikonik Star Wars dalam pengalaman interaktif real-time. Tunjukkan poster karakter ke kamera — mereka akan muncul dalam 3D, siap untuk diinteraksi.
-
----
-
-## ✨ Fitur Unggulan
-
-| Fitur | Deskripsi |
-|-------|-----------|
-| **AR Image Tracking** | Deteksi 6 target karakter (Darth Vader, AT-AT, Luke Skywalker, Yoda, R2-D2, X-Wing) dengan presisi tinggi |
-| **Interactive Tap** | Ketuk karakter untuk memicu animasi serangan yang dinamis |
-| **Info Panel** | Akses data karakter—nama, afiliasi, senjata—dengan panel UI yang responsif |
-| **Sonic Branding** | Audio signature otomatis saat karakter spawn; voice lines ikonik saat diinteraksi |
-| **Multi-touch Controls** | Satu jari untuk rotasi, dua jari untuk zoom; pergerakan mulus di perangkat mobile |
-| **Vuforia Powered** | Engine AR stabil dengan tracking konsisten di berbagai kondisi pencahayaan |
-
----
-
-## 🎯 Target Karakter & ImageTarget
-
-| Karakter | Afiliasi | Senjata | Status |
-|----------|----------|--------|--------|
-| **Darth Vader** | Dark Side (Sith) | Lightsaber Merah | ✅ Implementasi Lengkap |
-| **AT-AT** | Galactic Empire | Blaster Cannon | ✅ Implementasi Lengkap |
-| **Luke Skywalker** | Jedi / Rebel Alliance | Lightsaber Biru | ✅ Implementasi Lengkap |
-| **Yoda** | Jedi Council | Lightsaber Hijau | ✅ Implementasi Lengkap |
-| **R2-D2** | Rebel Alliance | Computing/Utilities | ✅ Implementasi Lengkap |
-| **X-Wing** | Rebel Alliance | Laser Cannons | ✅ Implementasi Lengkap |
-
-**Image Target Tersedia:** Poster/gambar karakter tersimpan di `Assets/Image Target/` dengan format JPG yang dioptimalkan untuk deteksi cepat.
+  <p>
+    <a href="#-executive-summary">Executive Summary</a> •
+    <a href="#-demo-video-teaser">Demo Video</a> •
+    <a href="#-visual-previews">Visual Previews</a> •
+    <a href="#-key-features">Key Features</a> •
+    <a href="#-system-architecture--tech-stack">Architecture & Tech Stack</a> •
+    <a href="#-character--vehicle-roster">Roster & Mechanics</a> •
+    <a href="#-project-directory-structure">Directory Structure</a> •
+    <a href="#-getting-started--setup-guide">Getting Started</a> •
+    <a href="#-team--credits">Team & Credits</a>
+  </p>
+</div>
 
 ---
 
-## 🏗️ Arsitektur & Alur Pengguna
+## 📌 Executive Summary
 
-### Alur Utama
+**Star Wars AR — Interactive Character Visualizer** adalah aplikasi Augmented Reality mobile generasi berikutnya yang memadukan teknologi *computer vision image tracking* dengan animasi 3D interaktif dan tata suara spasial sinematik. Proyek ini memecahkan keterbatasan media fisik konvensional (poster, kartu koleksi, dan ensiklopedia cetak) dengan mengubah gambar statis menjadi panggung hologram dinamis di dunia nyata.
+
+Cukup dengan mengarahkan kamera perangkat *smartphone* ke target poster yang telah ditentukan, sistem mengenali target secara presisi dalam waktu **kurang dari 2 detik** via **Vuforia Engine**. Pengguna dapat berinteraksi langsung dengan karakter legendaris seperti **Darth Vader, Luke Skywalker, Master Yoda, R2-D2**, serta kendaraan tempur ikonik **AT-AT Walker** dan **X-Wing Starfighter**. Fitur mencakup kendali gestur multisentuh (*360° orbital rotation* dan *pinch-to-zoom*), *tap-to-attack animation state machine*, info HUD hologram yang dirancang presisi di Figma, serta dialog suara asli setiap karakter untuk menghadirkan atmosfer fiksi ilmiah otentik dalam satu genggaman.
+
+---
+
+## 🎬 Demo Video Teaser
+
+<div align="center">
+  <a href="https://media.githubusercontent.com/media/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/main/STAR_WARS_AR_DEMO.mp4">
+    <img src="readme-assets/frame-12.jpg" alt="Star Wars AR Demo Video Teaser" width="90%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);" />
+  </a>
+  <p>
+    <em>🎥 Tonton cuplikan demo 45 detik: Title intro &rarr; Pengenalan karakter &rarr; Interaksi sentuh &rarr; AR live montage. <a href="https://media.githubusercontent.com/media/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/main/STAR_WARS_AR_DEMO.mp4"><strong>[Klik Di Sini Untuk Memutar Video MP4]</strong></a></em>
+  </p>
+</div>
+
+---
+
+## 📸 Visual Previews
+
+<div align="center">
+  <table width="100%" style="border-collapse: collapse; border: none; text-align: center;">
+    <tr>
+      <td width="50%" style="padding: 12px; border: none;">
+        <img src="screenshots/main-menu.png" alt="Main Menu UI" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
+        <br />
+        <p><em><strong>Holographic Main Menu:</strong> Antarmuka bertema sci-fi dengan navigasi How-to-Play, Scan Camera, dan integrasi audio latar Star Wars Theme.</em></p>
+      </td>
+      <td width="50%" style="padding: 12px; border: none;">
+        <img src="screenshots/how-to-play.png" alt="How To Play HUD" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
+        <br />
+        <p><em><strong>Interactive HUD Guide:</strong> Panduan interaktif tata cara scan target, gestur sentuh, dan pemicu animasi karakter.</em></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" style="padding: 12px; border: none;">
+        <img src="screenshots/ar-live-preview.jpg" alt="Live AR In-Action" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
+        <br />
+        <p><em><strong>Real-Time 3D Holographic Rendering:</strong> Visualisasi model 3D di atas permukaan nyata dengan pencahayaan dinamis dan panel data.</em></p>
+      </td>
+      <td width="50%" style="padding: 12px; border: none;">
+        <img src="screenshots/target-darth-vader.jpg" alt="Target Poster Darth Vader" width="100%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
+        <br />
+        <p><em><strong>High-Contrast Image Target:</strong> Kartu target teroptimasi dengan rasio fitur pelacakan tinggi untuk stabilitas tracking Vuforia.</em></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🚀 Key Features
+
+### 1. 🎯 Computer Vision & Ultra-Fast Image Target Recognition
+* **Sub-2-Second Detection**: Pelacakan marker instan berbasis *feature point extraction* Vuforia Engine dengan latensi minimal.
+* **Rock-Solid 6-DoF Spatial Anchoring**: Objek 3D terkunci secara akurat pada bidang target poster meski kamera bergerak atau sudut pandang berubah miring.
+* **Seamless Multi-Target Tracking**: Perpindahan otomatis antar poster karakter dan wahana tempur tanpa perlu mereset sesi aplikasi.
+
+### 2. ⚔️ Dynamic 3D Animations & Attack State Machine
+* **Dual-State Animator FSM**: Transisi halus antara status *Idle Animation* loop dan *Action/Attack Animation* berbasis trigger sekali sentuh (`SetTrigger`).
+* **Tactile Tap-to-Interact**: Pengguna dapat menyentuh karakter untuk memicu sabetan *lightsaber*, manuver terbang X-Wing, atau simulasi jatuh AT-AT.
+* **Vector Lerping Return Mechanic**: Script khusus (`Lerp`) mengembalikan posisi dan rotasi awal model kendaraan tempur secara mulus pasca animasi selesai.
+
+### 3. 👆 Intuitive Multi-Touch Mobile Gestures
+* **One-Finger 360° Orbital Rotate**: Sentuhan 1 jari (`TouchPhase.Moved`) memutar karakter secara horizontal pada sumbu dunia untuk inspeksi detail 3D 360 derajat.
+* **Pinch-to-Zoom Scaling**: Gestur dua jari (`Pinch`) dengan perhitungan delta magnitude dan pembatasan skala aman (`Mathf.Clamp`) agar ukuran model tetap proporsional.
+* **Desktop Fallback Simulation**: Dukungan penuh pengujian di Unity Editor menggunakan mouse *click-and-drag* tanpa perlu selalu me-rebuild ke perangkat HP.
+
+### 4. 🌌 Sci-Fi HUD Interface & Spatial Audio Atmosphere
+* **Figma-Engineered Holographic UI**: Desain komponen HUD futuristik (sudut braket, panel bio karakter, tombol neon) yang diimpor melalui *Figma Converter for Unity*.
+* **Smart UI Auto-Dismiss**: Panel informasi samping otomatis menghilang saat animasi serangan dipicu untuk memberikan bidang pandang kamera yang lapang.
+* **Iconic Character Voiceovers**: Pemutaran otomatis kutipan suara legendaris (seperti *"The Power of The Darkside"* & *"I am Luke Skywalker"*) saat model muncul dan disentuh.
+
+---
+
+## 🏛️ System Architecture & Tech Stack
+
+### High-Level Data Flow
+
+```mermaid
+graph TD
+    A["📱 Perangkat Kamera Mobile"] -->|"Video Stream Frame"| B["👁️ Vuforia Engine AR Core"]
+    B -->|"Feature Matching"| C{"🎯 Target Terdeteksi?"}
+    
+    C -->|"Ya (ID Match)"| D["📦 Instantiate & Anchor 3D Prefab"]
+    C -->|"Tidak"| A
+    
+    D --> E["🔊 Spatial Audio Controller<br/>(Play Iconic Quote)"]
+    D --> F["🖥️ UI Hologram HUD<br/>(Show Character Specs)"]
+    D --> G["🎮 Gesture & Input Handler<br/>(ObjectTransform.cs)"]
+    
+    G -->|"1 Jari Drag"| H["🔄 Rotate 360° World-Space"]
+    G -->|"2 Jari Pinch"| I["🔍 Zoom Scale (Mathf.Clamp)"]
+    G -->|"Tap Objek"| J["⚔️ Trigger Attack Animation<br/>& Auto-Hide HUD"]
 ```
-1. Aplikasi Dibuka
-   ↓
-2. Main Menu Ditampilkan
-   ├─ How To Play (tutorial)
-   └─ Mulai Scanning
-       ↓
-3. Scan Mode (Kamera Aktif)
-   ├─ Arahkan ke poster Star Wars
-   └─ ImageTarget Terdeteksi
-       ↓
-4. Karakter 3D Muncul
-   ├─ Audio signature diputar
-   ├─ Panel informasi aktif
-   └─ Siap untuk interaksi
-       ↓
-5. Interaksi
-   ├─ Tap: Animasi serangan + Audio VO
-   ├─ Geser: Rotasi karakter
-   ├─ Pinch: Zoom in/out
-   └─ Back: Kembali ke menu
-       ↓
-6. Exit / Repeat
-```
 
-### Komponen Kunci
-- **CharacterInteraction.cs**: Menangani deteksi tap dan pemicu animasi
-- **TapCharacter.cs**: Memutar audio signature pada karakter
-- **UIManager.cs**: Kontrol alur menu dan panel informasi
-- **ObjectTransform.cs**: Manajemen rotasi/zoom multi-touch
-- **QuitAplikasi.cs**: Keluar aplikasi dengan aman
+### Technology Matrix
+
+| Kategori | Teknologi / Asset | Versi / Rincian | Fungsi Utama |
+| :--- | :--- | :--- | :--- |
+| **Engine** | **Unity Engine** | `6.4 (6000.4.3f1)` URP | Core engine render 3D, scene management, dan pipeline grafis mobile |
+| **AR SDK** | **Vuforia Engine** | `10.x+` (Image Target DB) | Computer vision, feature point tracking, dan 6-DoF spatial anchoring |
+| **Bahasa** | **C# (.NET)** | Modern C# Scripting | Logika interaksi, gesture calculation, UI event handling, dan state machine |
+| **Gesture Input**| **Lean Touch & Native Touch** | `TouchPhase & InputSystem` | Manipulasi sentuh (rotasi orbital, pinch zoom, pointer raycast) |
+| **UI/UX Design** | **Figma & FCU** | `Figma Converter for Unity` | Desain layout antarmuka sci-fi HUD, vektor komponen, dan typography |
+| **3D Pipeline**  | **Blender & Mixamo** | `ActorCore / AccuRIG` | Optimasi mesh, auto-rigging tulang, dan baking animasi karakter |
+| **Sound System** | **Unity AudioSource** | Spatial Sound 44.1kHz | Voiceover karakter orisinil, sfx tembakan/mesin, dan Star Wars Main Theme |
+| **Platform Target**| **Android OS** | API Level 29+ (ARM64) | Target rilis format `.apk` untuk instalasi pada smartphone Android |
 
 ---
 
-## 🛠️ Tech Stack
+## 🎭 Character & Vehicle Roster
 
-| Komponen | Versi | Peran |
-|----------|-------|-------|
-| **Engine** | Unity 6.4 | Game engine dan runtime |
-| **AR SDK** | Vuforia 11.4.4 | Computer vision + image tracking |
-| **Input** | Unity InputSystem 1.19.0 | Multi-touch & mouse input handling |
-| **UI** | TextMesh Pro | Rendering teks dan UI HUD |
-| **Audio** | Unity AudioSource | Playback musik dan VO |
-| **Design Tools** | Figma Bridge 1.0.8 | Kolaborasi designer-developer |
-| **3D Assets** | Blender, Mixamo, ActorCore | Modelling, rigging, animasi |
+| Target Marker | Entitas | Sisi / Afiliasi | Aksi Interaktif | Suara / Dialog Ikonik |
+| :---: | :--- | :---: | :--- | :--- |
+| ![Poster](https://img.shields.io/badge/Poster-Vader-red) | **Darth Vader** | Dark Side (Sith Lord) | Sabetan *Red Lightsaber Attack* & panel bio tertutup otomatis | *"The Power Of The Darkside"* |
+| ![Poster](https://img.shields.io/badge/Poster-Luke-blue) | **Luke Skywalker** | Light Side (Jedi Knight) | Kuda-kuda serang *Green Lightsaber Combat* | *"I am Luke Skywalker"* |
+| ![Poster](https://img.shields.io/badge/Poster-Yoda-green) | **Master Yoda** | Light Side (Grand Master) | Manuver lompatan akrobatik *Force Strike* | *"Fear leads to anger, anger leads to hate"* |
+| ![Poster](https://img.shields.io/badge/Poster-R2D2-white) | **R2-D2** | Light Side (Astromech) | Rotasi kepala kubah & manuver maju interaktif | Suara siulan biner ikonik R2-D2 |
+| ![Poster](https://img.shields.io/badge/Poster-ATAT-grey) | **AT-AT Walker** | Galactic Empire | Efek runtuh tumbang dan reposisi dinamis | Suara dentuman meriam blaster & derap kaki baja |
+| ![Poster](https://img.shields.io/badge/Poster-XWing-orange) | **X-Wing Starfighter** | Rebel Alliance | Manuver lepas landas (*Take-off flight path*) | Deru akselerasi mesin hyperdrive T-65B |
 
 ---
 
-## 📁 Struktur Proyek
+## 📂 Project Directory Structure
 
-```
+```text
 Star-Wars-AR-Interactive-Character-Visualizer/
 ├── Assets/
-│   ├── AR StarWars.unity              # Scene utama (6 karakter + UI)
-│   ├── Image Target/                  # 6 JPG poster karakter
-│   ├── Audio/                         # Musik tema, SFX, voice lines
-│   ├── [Karakter]/                    # Darth Vader, AT-AT, Luke, Yoda, R2-D2, X-Wing
-│   │   ├── Models/                    # 3D mesh + rig
-│   │   ├── Textures/                  # Material textures
-│   │   └── Animations/                # AnimController + clips (idle, attack)
-│   ├── Prefabs/                       # Canvas, Quit, UI panels
-│   ├── Sprites/                       # UI icons (Main Menu, Scan, How To Play)
-│   ├── Canvas.prefab & Canvas 1.prefab # UI layouts
-│   ├── CharacterInteraction.cs        # Tap handler
-│   ├── TapCharacter.cs                # Audio playback
-│   ├── UIManager.cs                   # Menu control
-│   ├── ObjectTransform.cs             # Rotation + zoom
-│   ├── QuitAplikasi.cs                # Exit logic
-│   └── Figma/                         # Design exports (fonts, screens)
-├── ProjectSettings/
-│   ├── ProjectVersion.txt             # Unity version pin
-│   ├── XRSettings.asset               # Vuforia config
-│   └── ...
-├── Packages/
-│   └── manifest.json                  # Dependencies (Vuforia 11.4.4, InputSystem, etc.)
-└── README.md                          # Dokumentasi ini
+│   ├── AT-AT/                   # Asset 3D, Material & TriggerJatuhATAT.cs
+│   ├── Audio/                   # Koleksi file suara dialog karakter & tema utama
+│   ├── D.A. Assets/             # Plugin Figma Converter for Unity (FCU)
+│   ├── Darth Vader/             # Model 3D rig, material PBR, dan animasi Vader
+│   ├── Figma/                   # Screen renders & vector asset hasil sinkronisasi Figma
+│   ├── Icon/                    # Ikon aplikasi Star Wars & indikator trigger
+│   ├── Image Target/            # Poster target (.jpg) & dokumen cetak target (.pdf)
+│   ├── Luke Skywalker/          # Model 3D rig & animasi tempur Luke Skywalker
+│   ├── Plugins/                 # Library pihak ketiga (Lean Touch, CW Common)
+│   ├── Prefabs/                 # Prefab siap pakai (Canvas UI, Karakter, Partikel)
+│   ├── R2-D2/                   # Model 3D & R2D2Controller.cs
+│   ├── Scenes/
+│   │   └── AR StarWars.unity    # Scene utama yang memuat AR Camera & Image Targets
+│   ├── Sprites/                 # Background luar angkasa, HUD border, corner brackets
+│   ├── TextMesh Pro/            # Custom font sci-fi & resource typography
+│   ├── X-Wing/                  # Model 3D wahana tempur & TriggerTakeOffXWing.cs
+│   ├── Yoda/                    # Model 3D & CharacterTapTrigger.cs
+│   │
+│   ├── CharacterInteraction.cs  # Event click pointer untuk memicu animasi & sembunyikan HUD
+│   ├── ObjectTransform.cs       # Algoritma rotasi 1-jari dan pinch-to-zoom 2-jari
+│   ├── QuitAplikasi.cs          # Pengendali keluar aplikasi secara aman
+│   ├── TapCharacter.cs          # Pemicu pemutaran audio saat model disentuh
+│   └── UIManager.cs             # Manajemen navigasi Canvas (Menu, Panduan, Mode Scan)
+│
+├── screenshots/                 # Preview visual beresolusi tinggi untuk dokumentasi
+├── ProjectSettings/             # Konfigurasi Unity, Player Settings, dan Target Build
+├── Packages/                    # Manifest paket Unity (URP, TextMeshPro, Vuforia)
+└── README.md                    # Dokumentasi standar industri repositori ini
 ```
 
 ---
 
-## 🚀 Cara Membuka & Setup
+## 🛠️ Getting Started & Setup Guide
 
-### Prasyarat
-- **Unity 6.4** (download dari [unity.com](https://unity.com))
-- **Vuforia Engine 11.4.4** (sudah included di Packages/manifest.json)
-- **Smartphone Android** dengan ARCore (untuk build final)
+### Prasyarat Sistem
+* **Unity Hub** versi terbaru.
+* **Unity 6 (6000.4.3f1)** atau Unity LTS (2022.3.x+) dengan modul:
+  * `Android Build Support`
+  * `Android SDK & NDK Tools`
+  * `OpenJDK`
+* **Vuforia Engine AR** package (terinstal via Unity Package Manager atau tarball).
+* Akun gratis di [Vuforia Developer Portal](https://developer.vuforia.com/) untuk lisensi pengembangan.
 
-### Langkah-langkah
+### Langkah Instalasi & Menjalankan Proyek
 
-#### 1. Clone Repository
-```bash
-git clone https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer.git
-cd Star-Wars-AR-Interactive-Character-Visualizer
-```
+1. **Clone Repositori GitHub**
+   ```bash
+   git clone https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer.git
+   cd Star-Wars-AR-Interactive-Character-Visualizer
+   ```
 
-#### 2. Buka di Unity
-- Launch Unity Hub → Open → pilih folder ini
-- Unity akan import Assets (tunggu 2–5 menit untuk first load)
+2. **Buka Proyek Melalui Unity Hub**
+   * Buka **Unity Hub** -> Klik tombol **Add** -> Pilih folder hasil clone di atas.
+   * Pastikan menggunakan versi Unity **6000.4.3f1** (atau versi Unity 6/2022 LTS yang sesuai).
+   * Buka project dan tunggu hingga proses import asset selesai.
 
-#### 3. Vuforia License Setup (One-time)
-- Kunjungi [developer.vuforia.com](https://developer.vuforia.com)
-- Create free Developer Account
-- Generate **License Key**
-- Di Unity Editor: Vuforia Engine → License Manager → paste key Anda
+3. **Konfigurasi Lisensi Vuforia**
+   * Di dalam Unity Editor, pilih menu **Window** > **Vuforia Configuration**.
+   * Masukkan **App License Key** Anda yang didapatkan dari Vuforia Developer Portal.
 
-#### 4. Build untuk Testing
-- **PC Testing**: File → Build and Run (gunakan Editor playmode atau Build UWP)
-- **Android Build**:
-  - File → Build Settings
-  - Switch platform ke Android
-  - Player settings: Target API 30+, ARCore support enabled
-  - Build APK → install ke smartphone
+4. **Buka Scene Utama**
+   * Navigasikan ke panel Project: `Assets/AR StarWars.unity` (atau di folder `Assets/Scenes/`).
+   * Dobel-klik scene untuk membuka hierarki AR Camera dan Image Target.
 
-#### 5. Gunakan Image Target
-- Print atau buka gambar karakter dari `Assets/Image Target/`
-- Jalankan app di smartphone
-- Arahkan kamera ke poster → karakter muncul!
+5. **Pengujian di Komputer (Unity Editor)**
+   * Hubungkan webcam ke PC/Laptop Anda.
+   * Klik tombol **Play (▶️)** di bagian atas Unity.
+   * Arahkan webcam ke poster target (bisa dibuka di layar HP lain dari file `Assets/Image Target/Image Target.pdf`).
+   * Tahan klik kiri mouse untuk memutar karakter atau klik pada karakter untuk memicu animasi serangan.
 
----
-
-## 📊 Mekanik & Gameplay
-
-### Deteksi & Spawn
-- **Detection Distance**: ~50 cm hingga 2 meter (optimal)
-- **Spawn Time**: <2 detik setelah ImageTarget terdeteksi
-- **Tracking Stability**: Konsisten bahkan dengan pencahayaan rendah (Vuforia SmartTerrain)
-
-### Tap Interaction
-```csharp
-OnPointerClick → Animator.SetTrigger("PlayAction") 
-              → Play attack animation (0.6–1.2 detik)
-              → AudioSource.Play() (VO karakter)
-```
-
-### Multi-touch Controls
-- **1 Finger Drag**: Rotasi Y-axis (0.5x speed)
-- **2 Finger Pinch**: Zoom in/out (0.01 scale per frame)
-- **Testing di PC**: Left Mouse Drag untuk rotasi, scroll untuk zoom
-
-### Info Panel
-- **Tombol**: Aktif otomatis saat karakter spawn
-- **Data**: Nama, Afiliasi, Senjata, Quote (editable di Canvas inspector)
-- **Close**: Tombol "Back" atau tap outside panel
+6. **Membangun APK untuk Android (Build)**
+   * Buka **File** > **Build Settings...**
+   * Pilih platform **Android** dan klik **Switch Platform**.
+   * Pastikan scene `AR StarWars` berada dalam daftar *Scenes in Build*.
+   * Hubungkan HP Android Anda via kabel USB (aktifkan *USB Debugging*), lalu klik **Build and Run** (atau pilih **Build** untuk menghasilkan file `.apk`).
 
 ---
 
-## 🎬 Demo Video
+## 👥 Team & Credits
 
-Demonstrasi fitur-fitur utama tersedia di:
-- **YouTube**: [Link demo akan ditambahkan] (production ready video coming soon)
-- **Folder lokal**: `/Demo Video/` (jika ada)
+Proyek ini dikembangkan oleh **Team 5** sebagai bagian dari pemenuhan proyek mata kuliah **Augmented Reality & Virtual Reality**:
 
----
+| Nama Pengembang | Peran & Tanggung Jawab | Profil GitHub / Kontak |
+| :--- | :--- | :--- |
+| **Kafka Nafisa** | **Project Manager (PM)**<br/>*Requirement analysis, timeline coordination, PRD authoring* | [@kafkanafisa](https://github.com/) |
+| **Anisa Aulia** | **UI/UX Designer**<br/>*Sci-Fi Holographic HUD styling, typography, Figma wireframes* | [@anisaaulia](https://github.com/) |
+| **Jizdan Yuflikh R** | **3D Artist, Animator & Lead Developer**<br/>*3D character modeling, rigging, gesture controls & repo maintainer* | [@EVRT10](https://github.com/EVRT10) / [@UnnamedPeople-Chin](https://github.com/UnnamedPeople-Chin) |
+| **Nazriel Farras Khairiya P. S.** | **Developer & Sound Designer**<br/>*Vuforia integration, state machines, spatial sound design* | [@nazrielfarras](https://github.com/) |
 
-## 👥 Tim Pengembang (Kelompok 5)
-
-| Peran | Nama |
-|------|------|
-| **Project Manager** | Kafka Nafisa |
-| **UI/UX Designer** | Anisa Aulia |
-| **3D Artist, Animator, Sound Designer, QA** | Jizdan Yuflikh R |
-| **Developer, Sound Designer** | Nazriel Farras Khairiya Putra Sisworo |
+### Pembimbing & Fasilitator Akademik
+* **Dosen Pengampu**: Mr. Ambar
+* **Institusi**: Program Studi Sarjana Terapan Teknik Telekomunikasi / Informatika — **Politeknik Negeri Semarang (POLINES)**
 
 ---
 
-## 📝 Lisensi & Disclaimer
-
-### IP Disclaimer
-**Star Wars** adalah properti intelektual **Lucasfilm Ltd.** (Disney). Proyek ini adalah **edukasi non-komersial** untuk tujuan pembelajaran Augmented Reality dan tidak bermaksud untuk komersial. Penggunaan aset Star Wars hanya untuk internal project / academic submission.
-
-### Kontribusi & Pengembangan Lanjutan
-Tertarik untuk kontribusi? Silakan buat **Pull Request** dengan:
-- Deskripsi fitur baru atau bug fix
-- Test steps
-- Screenshot / video (jika ada perubahan visual)
-
-### Lisensi Kode
-Kode sumber tersedia di bawah lisensi **MIT** (see LICENSE file jika ada). Dependency Vuforia Engine mengikuti [Vuforia EULA](https://developer.vuforia.com/terms).
-
----
-
-## 🔗 Link Penting
-
-- **GitHub Repo**: https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer
-- **Vuforia Developer**: https://developer.vuforia.com
-- **Unity Docs**: https://docs.unity.com
-- **Image Target Images**: `Assets/Image Target/*.jpg`
-
----
-
-## 📞 Support & Feedback
-
-Menemukan bug atau punya saran? Buka **GitHub Issues** atau hubungi tim melalui:
-- Kelompok 5 (academic project contact)
-- Repository discussions (jika enabled)
-
----
-
-**Terakhir diupdate:** 22 Oktober 2026  
-**Status**: Production Ready (Founder-Grade Demo Ready)  
-**Versi Stabil**: v1.0.0
-
-May the Force Be With You. 🚀✨
+<div align="center">
+  <p>May the Force be with you. 🌌</p>
+  <sub>Released under the <a href="LICENSE">MIT License</a>. Star Wars and all related properties are copyright &copy; Lucasfilm Ltd. / The Walt Disney Company. This is an academic non-commercial project.</sub>
+</div>
