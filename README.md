@@ -6,7 +6,7 @@
   <p>
     <a href="https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer"><img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge&logo=git&logoColor=white" alt="Status" /></a>
     <a href="https://github.com/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/releases"><img src="https://img.shields.io/badge/Build-Android%20APK%20(ARM64)-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android Build" /></a>
-    <a href="STAR_WARS_AR_DEMO.mp4"><img src="https://img.shields.io/badge/Demo-45s_Video_Teaser-FF6B35?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo Video" /></a>
+    <a href="https://youtu.be/DsPyzpgbho8"><img src="https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Demo Video" /></a>
     <img src="https://img.shields.io/badge/Unity-6000.4.3f1%20(Unity%206)-black?style=for-the-badge&logo=unity&logoColor=white" alt="Unity 6" />
     <img src="https://img.shields.io/badge/AR%20SDK-Vuforia%20Engine-FF6F00?style=for-the-badge&logo=augmented-reality&logoColor=white" alt="Vuforia Engine" />
     <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C# Language" />
@@ -16,7 +16,7 @@
 
   <p>
     <a href="#-about-the-project">About The Project</a> •
-    <a href="#-demo-video-teaser">Demo Video</a> •
+    <a href="#-demo-video--showcase">Demo Video</a> •
     <a href="#-visual-previews">Visual Previews</a> •
     <a href="#-key-features">Key Features</a> •
     <a href="#-system-architecture--tech-stack">Architecture & Tech Stack</a> •
@@ -37,14 +37,15 @@ Users can explore iconic Star Wars legends—including **Darth Vader, Luke Skywa
 
 ---
 
-## 🎬 Demo Video Teaser
+## 🎬 Demo Video & Showcase
 
 <div align="center">
-  <a href="https://media.githubusercontent.com/media/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/main/STAR_WARS_AR_DEMO.mp4">
-    <img src="readme-assets/frame-12.jpg" alt="Star Wars AR Demo Video Teaser" width="90%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);" />
+  <a href="https://youtu.be/DsPyzpgbho8" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/DsPyzpgbho8/hqdefault.jpg" alt="Star Wars AR Interactive Character Visualizer Demo Video" width="85%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);" />
   </a>
   <p>
-    <em>🎥 Tonton cuplikan demo 45 detik: Title intro &rarr; Pengenalan karakter &rarr; Interaksi sentuh &rarr; AR live montage. <a href="https://media.githubusercontent.com/media/UnnamedPeople-Chin/Star-Wars-AR-Interactive-Character-Visualizer/main/STAR_WARS_AR_DEMO.mp4"><strong>[Klik Di Sini Untuk Memutar Video MP4]</strong></a></em>
+    <em>🎥 <strong>Full Showcase Video:</strong> Star Wars AR Interactive Character Visualizer — Kelompok 5 (AR/VR Polines). <br />
+    <a href="https://youtu.be/DsPyzpgbho8" target="_blank" rel="noopener noreferrer"><strong>[▶️ Klik Di Sini Untuk Menonton di YouTube]</strong></a></em>
   </p>
 </div>
 
