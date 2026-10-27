@@ -247,7 +247,7 @@ Proyek ini dikembangkan oleh **Team 5** sebagai bagian dari pemenuhan proyek mat
 | Nama Pengembang | Peran & Tanggung Jawab | Profil GitHub / Kontak |
 | :--- | :--- | :--- |
 | **Kafka Nafisa** | **Project Manager (PM)**<br/>*Requirement analysis, timeline coordination, PRD authoring* | [@kfknfs](https://github.com/kfknfs) |
-| **Anisa Aulia** | **UI/UX Designer**<br/>*Sci-Fi Holographic HUD styling, typography, Figma wireframes* | [@anisaaulia](https://github.com/) |
+| **Anisa Aulia** | **UI/UX Designer**<br/>*Sci-Fi Holographic HUD styling, typography, Figma wireframes* | [@anisaaulia](https://github.com/anisaaulia) |
 | **Jizdan Yuflikh R** | **3D Artist, Animator & Lead Developer**<br/>*3D character modeling, rigging, gesture controls & repo maintainer* | [@UnnamedPeople-Chin](https://github.com/UnnamedPeople-Chin) |
 | **Nazriel Farras Khairiya P. S.** | **Developer & Sound Designer**<br/>*Vuforia integration, state machines, spatial sound design* | [@nzrlfrrs](https://github.com/nzrlfrrs) |
 
